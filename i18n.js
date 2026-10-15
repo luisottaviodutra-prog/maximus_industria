@@ -58,6 +58,13 @@
       'Vous créez votre marque. Maximus s’occupe de la fabrication.',
       'أنت تبتكر علامتك التجارية، وماكسيموس تتولى التصنيع.'
     ],
+    hero_media_label: [
+      'Tecnologia a serviço da beleza',
+      'Technology in the service of beauty',
+      'Tecnología al servicio de la belleza',
+      'La technologie au service de la beauté',
+      'التكنولوجيا في خدمة الجمال'
+    ],
     mf_label: ['Manifesto', 'Manifesto', 'Manifiesto', 'Manifeste', 'بياننا'],
     mf_intro_a: [
       'Na Maximus Indústria, a gente acredita que fabricar um cosmético é muito mais do que misturar ',
@@ -135,6 +142,48 @@
       'En nuestra industria, cada etapa importa.',
       'Dans notre industrie, chaque étape compte.',
       'في صناعتنا، لكل مرحلة أهميتها.'
+    ],
+    media_h: [
+      'Nossa estrutura, em cada detalhe',
+      'Our capabilities, in every detail',
+      'Nuestra estructura, en cada detalle',
+      'Notre structure, dans chaque détail',
+      'قدراتنا، في كل التفاصيل'
+    ],
+    media_intro: [
+      'Conheça os pilares que transformam cada ideia em um produto de qualidade.',
+      'Discover the pillars that turn every idea into a quality product.',
+      'Conoce los pilares que transforman cada idea en un producto de calidad.',
+      'Découvrez les piliers qui transforment chaque idée en un produit de qualité.',
+      'اكتشف الركائز التي تحوّل كل فكرة إلى منتج عالي الجودة.'
+    ],
+    media_technology: [
+      'Tecnologia e estrutura',
+      'Technology and infrastructure',
+      'Tecnología e infraestructura',
+      'Technologie et infrastructures',
+      'التكنولوجيا والبنية التحتية'
+    ],
+    media_formula: [
+      'Desenvolvimento e formulação',
+      'Product development and formulation',
+      'Desarrollo y formulación',
+      'Développement et formulation',
+      'تطوير التركيبات'
+    ],
+    media_filling: [
+      'Linha de envase',
+      'Filling line',
+      'Línea de envasado',
+      'Ligne de conditionnement',
+      'خط التعبئة'
+    ],
+    media_quality: [
+      'Controle de qualidade',
+      'Quality control',
+      'Control de calidad',
+      'Contrôle qualité',
+      'مراقبة الجودة'
     ],
     proc_intro_a: [
       'Trabalhamos com processos de ',
@@ -399,7 +448,7 @@
     ],
     f_social: ['Redes sociais', 'Social media', 'Redes sociales', 'Réseaux sociaux', 'وسائل التواصل الاجتماعي'],
     phone: ['+55 (19) 99758-1227', '+55 (19) 99758-1227', '+55 (19) 99758-1227', '+55 (19) 99758-1227', '+55 (19) 99758-1227'],
-    location: ['Cidade / UF', 'City / State', 'Ciudad / Estado', 'Ville / Région', 'المدينة / المنطقة'],
+    location: ['São Paulo | SP', 'São Paulo | SP', 'São Paulo | SP', 'São Paulo | SP', 'São Paulo | SP'],
     copyright: [
       '© 2026 Maximus Indústria. Todos os direitos reservados.',
       '© 2026 Maximus Indústria. All rights reserved.',
