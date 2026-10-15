@@ -58,6 +58,71 @@
       'Vous créez votre marque. Maximus s’occupe de la fabrication.',
       'أنت تبتكر علامتك التجارية، وماكسيموس تتولى التصنيع.'
     ],
+    hero_cta_process: [
+      'Conheça Nossos Processos',
+      'Explore Our Processes',
+      'Conoce nuestros procesos',
+      'Découvrez nos processus',
+      'اكتشف عملياتنا'
+    ],
+    hero_cta_contact: [
+      'Fale com um Especialista',
+      'Talk to a Specialist',
+      'Habla con un especialista',
+      'Parlez à un spécialiste',
+      'تحدث إلى أحد المختصين'
+    ],
+    proof_aria: [
+      'Destaques da operação',
+      'Operational highlights',
+      'Aspectos destacados de la operación',
+      'Points forts de nos opérations',
+      'أبرز مميزات العمليات'
+    ],
+    proof_stages_value: ['8 etapas', '8 stages', '8 etapas', '8 étapes', '8 مراحل'],
+    proof_stages_label: [
+      'do desenvolvimento à expedição',
+      'from development through shipping',
+      'desde el desarrollo hasta el envío',
+      'du développement à l’expédition',
+      'من التطوير إلى الشحن'
+    ],
+    proof_quality_value: ['Qualidade', 'Quality', 'Calidad', 'Qualité', 'الجودة'],
+    proof_quality_label: [
+      'acompanhada em todo o processo',
+      'monitored throughout the process',
+      'supervisada durante todo el proceso',
+      'suivie tout au long du processus',
+      'تُتابع في جميع مراحل العملية'
+    ],
+    proof_portfolio_value: [
+      'Diversas categorias',
+      'Multiple categories',
+      'Diversas categorías',
+      'Plusieurs catégories',
+      'فئات متنوعة'
+    ],
+    proof_portfolio_label: [
+      'de produtos cosméticos',
+      'of cosmetic products',
+      'de productos cosméticos',
+      'de produits cosmétiques',
+      'من مستحضرات التجميل'
+    ],
+    proof_compliance_value: [
+      'Conformidade',
+      'Compliance',
+      'Cumplimiento',
+      'Conformité',
+      'الامتثال'
+    ],
+    proof_compliance_label: [
+      'licenças e regularizações aplicáveis',
+      'applicable licenses and regulatory approvals',
+      'licencias y regularizaciones aplicables',
+      'autorisations et enregistrements applicables',
+      'التراخيص والتصاريح المعمول بها'
+    ],
     hero_media_label: [
       'Tecnologia a serviço da beleza',
       'Technology in the service of beauty',
