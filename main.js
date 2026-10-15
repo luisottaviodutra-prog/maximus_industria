@@ -43,11 +43,15 @@
     title.textContent = term.dataset.term || term.textContent;
     body.textContent = term.dataset.tooltip;
     term.setAttribute('aria-describedby', tip.id);
+    window.addEventListener('scroll', hide, { passive: true });
+    window.addEventListener('resize', hide);
     place(term);
     tip.classList.add('is-open');
   }
   function hide() {
     if (!current) return;
+    window.removeEventListener('scroll', hide);
+    window.removeEventListener('resize', hide);
     current.removeAttribute('aria-describedby');
     current = null;
     pinned = false;
@@ -88,8 +92,6 @@
       toggle(e.target);
     }
   });
-  window.addEventListener('scroll', hide, { passive: true });
-  window.addEventListener('resize', hide);
 })();
 
 /* ============ MÓDULO 3: SELETOR DE IDIOMAS ============ */
