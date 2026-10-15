@@ -397,7 +397,8 @@
       'MAXIMUS INDÚSTRIA — fabrication de cosmétiques.',
       'MAXIMUS INDÚSTRIA — تصنيع مستحضرات التجميل.'
     ],
-    phone: ['(00) 0000-0000', '(00) 0000-0000', '(00) 0000-0000', '(00) 0000-0000', '(00) 0000-0000'],
+    f_social: ['Redes sociais', 'Social media', 'Redes sociales', 'Réseaux sociaux', 'وسائل التواصل الاجتماعي'],
+    phone: ['+55 (19) 99758-1227', '+55 (19) 99758-1227', '+55 (19) 99758-1227', '+55 (19) 99758-1227', '+55 (19) 99758-1227'],
     location: ['Cidade / UF', 'City / State', 'Ciudad / Estado', 'Ville / Région', 'المدينة / المنطقة'],
     copyright: [
       '© 2026 Maximus Indústria. Todos os direitos reservados.',

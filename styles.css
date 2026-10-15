@@ -584,6 +584,7 @@ main > section + section {
 .ftr__grid {
   display: grid;
   gap: 2.5rem;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .ftr p {
@@ -618,6 +619,7 @@ main > section + section {
   display: flex;
   align-items: center;
   gap: .6rem;
+  min-width: 0;
 }
 
 .ftr address .i {
@@ -627,6 +629,15 @@ main > section + section {
 }
 
 .ftr address a {
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
+.ftr__social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  margin-top: 1rem;
   color: var(--accent);
 }
 
@@ -642,7 +653,7 @@ main > section + section {
 
 @media (min-width: 768px) {
   .ftr__grid {
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, .7fr);
     gap: 4rem;
   }
 }
