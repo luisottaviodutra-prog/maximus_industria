@@ -91,3 +91,35 @@
   window.addEventListener('scroll', hide, { passive: true });
   window.addEventListener('resize', hide);
 })();
+
+/* ============ MÓDULO 3: SELETOR DE IDIOMAS ============ */
+(function () {
+  'use strict';
+  var KEY = 'maximus-lang', LABEL = { 'pt-BR': 'PT', en: 'EN', es: 'ES', fr: 'FR', ar: 'AR' };
+  var box = document.getElementById('lang'); if (!box) return;
+  var btn = box.querySelector('.lang__btn'), cur = btn.querySelector('span');
+  var nodes = [].slice.call(document.querySelectorAll('[data-i18n]'));
+  var meta = document.querySelector('meta[name="description"]'), pt = { title: document.title, desc: meta.content };
+  nodes.forEach(function (n) { n.dataset.pt = n.innerHTML; });
+
+  function set(code) {
+    var d = (window.MAXIMUS_I18N || {})[code] || {};
+    nodes.forEach(function (n) { var v = d[n.dataset.i18n]; n.innerHTML = v !== undefined ? v : n.dataset.pt; });
+    document.title = d.title || pt.title; meta.content = d.desc || pt.desc;
+    document.documentElement.lang = code;
+    document.documentElement.dir = code === 'ar' ? 'rtl' : 'ltr';
+    cur.textContent = LABEL[code];
+    [].forEach.call(box.querySelectorAll('[data-lang]'), function (b) { b.setAttribute('aria-current', b.dataset.lang === code); });
+    try { localStorage.setItem(KEY, code); } catch (e) {}
+    window.dispatchEvent(new Event('resize'));
+  }
+  function toggle(open) { box.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); }
+
+  btn.addEventListener('click', function () { toggle(!box.classList.contains('open')); });
+  box.addEventListener('click', function (e) { var b = e.target.closest('[data-lang]'); if (b) { set(b.dataset.lang); toggle(false); btn.focus(); } });
+  document.addEventListener('click', function (e) { if (!box.contains(e.target)) toggle(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') toggle(false); });
+
+  var saved; try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (saved && LABEL[saved] && saved !== 'pt-BR') set(saved); else set('pt-BR');
+})();
