@@ -6,9 +6,10 @@
   if (!btn || !nav) return;
 
   function set(open) {
+    var translations = (window.MAXIMUS_I18N || {})[document.documentElement.lang] || {};
     nav.classList.toggle('open', open);
     btn.setAttribute('aria-expanded', open);
-    btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    btn.setAttribute('aria-label', translations[open ? 'menu_close' : 'menu_open'] || (open ? 'Fechar menu' : 'Abrir menu'));
   }
 
   btn.addEventListener('click', function () {
@@ -63,8 +64,9 @@
 
     hide();
     current = term;
-    title.textContent = term.dataset.term || term.textContent;
-    body.textContent = term.dataset.tooltip;
+    var translations = (window.MAXIMUS_I18N || {})[document.documentElement.lang] || {};
+    title.textContent = translations[term.dataset.i18n] || term.dataset.term || term.textContent;
+    body.textContent = translations[term.dataset.i18nTooltip] || term.dataset.tooltip;
     term.setAttribute('aria-describedby', tip.id);
     window.addEventListener('scroll', hide, { passive: true });
     window.addEventListener('resize', hide);
@@ -153,7 +155,7 @@
   var pt = { title: document.title, desc: meta.content };
 
   nodes.forEach(function (node) {
-    node.dataset.pt = node.innerHTML;
+    node.dataset.pt = node.textContent;
   });
 
   function set(code) {
@@ -161,11 +163,34 @@
 
     nodes.forEach(function (node) {
       var value = translations[node.dataset.i18n];
-      node.innerHTML = value !== undefined ? value : node.dataset.pt;
+      node.textContent = value !== undefined ? value : node.dataset.pt;
     });
 
     document.title = translations.title || pt.title;
     meta.content = translations.desc || pt.desc;
+    var structuredData = document.querySelector('script[type="application/ld+json"]');
+    if (structuredData) {
+      var organization = JSON.parse(structuredData.textContent);
+      organization.description = translations.schema_desc;
+      structuredData.textContent = JSON.stringify(organization);
+    }
+
+    [].forEach.call(document.querySelectorAll('[data-i18n-content]'), function (node) {
+      var value = translations[node.dataset.i18nContent];
+      if (value !== undefined) node.setAttribute('content', value);
+    });
+
+    [].forEach.call(document.querySelectorAll('[data-i18n-aria-label]'), function (node) {
+      var value = translations[node.dataset.i18nAriaLabel];
+      if (value !== undefined) node.setAttribute('aria-label', value);
+    });
+
+    var menu = document.getElementById('menuBtn');
+    var nav = document.getElementById('nav');
+    if (menu && nav) {
+      menu.setAttribute('aria-label', translations[nav.classList.contains('open') ? 'menu_close' : 'menu_open']);
+    }
+
     document.documentElement.lang = code;
     document.documentElement.dir = code === 'ar' ? 'rtl' : 'ltr';
     cur.textContent = LABEL[code];

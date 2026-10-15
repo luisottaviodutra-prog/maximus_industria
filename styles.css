@@ -658,6 +658,16 @@ main > section + section {
   line-height: 1.95;
 }
 
+[dir="rtl"] body {
+  direction: rtl;
+  text-align: start;
+}
+
+[dir="rtl"] .hdr__tools,
+[dir="rtl"] .ftr address span {
+  direction: rtl;
+}
+
 [dir="rtl"] .glossary-tip__box {
   text-align: right;
 }
