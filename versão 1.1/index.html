@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maximus Indústria | Fabricação e terceirização de cosméticos</title>
+<meta name="description" content="Você cria a sua marca. A Maximus cuida da fabricação. Indústria de cosméticos com terceirização completa, controle de qualidade rigoroso e regularidade total.">
+<meta name="theme-color" content="#050505">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Maximus Indústria | Muito além de fabricar cosméticos.">
+<meta property="og:description" content="Você cria a sua marca. A Maximus cuida da fabricação.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Maximus Indústria","description":"Indústria de fabricação e terceirização de cosméticos."}</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ SPRITE DE ÍCONES (SVG embutido, reutilizado via <use>) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="scale" viewBox="0 0 24 24"><path d="M12 3v18M6 21h12M5 7h14M7 7l-3 7a3 3 0 0 0 6 0L7 7zM17 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></symbol>
+  <symbol id="flask" viewBox="0 0 24 24"><path d="M10 2v7.5L4.5 19a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L14 9.5V2M8.5 2h7M7 16h10"/></symbol>
+  <symbol id="gauge" viewBox="0 0 24 24"><path d="m12 14 4-4M3.3 19a10 10 0 1 1 17.4 0"/></symbol>
+  <symbol id="box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5V8zM3.3 7.5 12 12.5l8.7-5M12 22V12.5"/></symbol>
+  <symbol id="palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.3 0-1.1.9-2 2-2h2.3A3.7 3.7 0 0 0 21 10.7C21 6.3 17 3 12 3zM7.5 11h.01M10 7.5h.01M14.5 7.5h.01"/></symbol>
+  <symbol id="spark" viewBox="0 0 24 24"><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3zM19 16l.7 1.8 1.8.7-1.8.7L19 21l-.7-1.8-1.8-.7 1.8-.7L19 16z"/></symbol>
+  <symbol id="drop" viewBox="0 0 24 24"><path d="M12 3s6 6.2 6 10.5a6 6 0 0 1-12 0C6 9.2 12 3 12 3z"/></symbol>
+  <symbol id="waves" viewBox="0 0 24 24"><path d="M3 8c3 0 3 2 6 2s3-2 6-2 3 2 6 2M3 14c3 0 3 2 6 2s3-2 6-2 3 2 6 2"/></symbol>
+  <symbol id="layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5zM3 13l9 5 9-5"/></symbol>
+  <symbol id="curl" viewBox="0 0 24 24"><path d="M12 12a2 2 0 1 1 2 2 4 4 0 1 1-4-4 6 6 0 1 1 6 6"/></symbol>
+  <symbol id="shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6l8-3zM8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="wind" viewBox="0 0 24 24"><path d="M3 8h10a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h7"/></symbol>
+  <symbol id="shrink" viewBox="0 0 24 24"><path d="M4 14h6v6M20 10h-6V4M14 10l7-7M3 21l7-7"/></symbol>
+  <symbol id="cpu" viewBox="0 0 24 24"><path d="M7 5h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM9 9h6v6H9zM9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></symbol>
+  <symbol id="globe" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+  <symbol id="users" viewBox="0 0 24 24"><path d="M16 20v-1.5a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4V20M9.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM21 20v-1.5a4 4 0 0 0-3-3.9M15.5 4.2a3.5 3.5 0 0 1 0 6.6"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><path d="M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM3 7l9 6 9-6"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11zM12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></symbol>
+</svg>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <div class="wrap hdr__bar" style="flex-wrap:wrap">
+    <a class="logo" href="#inicio" aria-label="Maximus Indústria, ir ao início"><b class="gt" aria-hidden="true">X</b>MAXIMUS</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu"><svg class="i" style="width:1.75rem;height:1.75rem"><use href="#menu"/></svg></button>
+    <nav class="nav" id="nav" aria-label="Principal" style="flex-basis:100%;order:3">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#processos">Processos</a></li>
+        <li><a href="#inovacao">Inovação</a></li>
+        <li><a href="#conformidade">Conformidade</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--p hdr__cta" href="#contato">Fale com a Indústria <svg class="i"><use href="#arrow"/></svg></a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio" aria-labelledby="t-hero">
+  <div class="wrap">
+    <p class="eyebrow">Indústria de cosméticos · <span class="glossary-term" tabindex="0" data-term="Private label" data-tooltip="Modelo em que a indústria fabrica o produto e a marca que o vende pertence ao cliente.">Private label</span></p>
+    <h1 id="t-hero"><span>Muito além de</span><span class="ol">fabricar</span><span class="gt">cosméticos.</span></h1>
+    <p class="hero__sub">Você cria a sua marca. <strong>A Maximus cuida da fabricação.</strong></p>
+    <div class="hero__cta">
+      <a class="btn btn--p" href="#contato">Iniciar meu projeto <svg class="i"><use href="#arrow"/></svg></a>
+      <a class="btn btn--g" href="#portfolio">Conhecer portfólio</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="sec manifesto" aria-labelledby="t-manifesto">
+  <div class="wrap">
+    <h2 class="eyebrow" id="t-manifesto">Manifesto</h2>
+    <p class="mf">Toda marca começa com <span class="gt">uma ideia.</span></p>
+    <p class="mf">Um sonho que alguém teve, <span class="gt">sozinho.</span></p>
+    <p class="mf">A Maximus pega esse sonho <span class="gt">nas mãos.</span></p>
+    <p class="mf">E transforma em <span class="glossary-term" tabindex="0" data-term="Fórmula" data-tooltip="A receita do produto: ingredientes, proporções e modo de preparo.">fórmula</span>, em <span class="glossary-term" tabindex="0" data-term="Lote" data-tooltip="Quantidade de produto fabricada de uma só vez, com identificação própria para rastreio.">lote</span>, <span class="gt">em produto.</span></p>
+    <p class="mf">Até chegar a quem <span class="gt">vai usar.</span></p>
+  </div>
+</section>
+
+<!-- ============ PROCESSOS ============ -->
+<section class="sec" id="processos" aria-labelledby="t-proc">
+  <div class="wrap">
+    <p class="eyebrow">Do laboratório ao frasco</p>
+    <h2 class="h2 rv" id="t-proc">Rigor técnico, feito com paixão.</h2>
+    <div class="steps">
+      <details class="card step rv" name="etapa" open>
+        <summary><svg class="i"><use href="#scale"/></svg><h3>Pesagem</h3></summary>
+        <div class="step__body"><p>Cada <span class="glossary-term" tabindex="0" data-term="Matéria-prima" data-tooltip="Insumos usados na fabricação, como ativos, surfactantes, óleos e fragrâncias.">matéria-prima</span> medida com precisão. A <span class="glossary-term" tabindex="0" data-term="Fórmula" data-tooltip="A receita do produto: ingredientes, proporções e modo de preparo.">fórmula</span> só é fiel se a base for exata.</p><ul><li>Dosagem conforme a fórmula</li><li>Registro e rastreio por <span class="glossary-term" tabindex="0" data-term="Lote" data-tooltip="Quantidade de produto fabricada de uma só vez, com identificação própria para rastreio.">lote</span></li></ul></div>
+      </details>
+      <details class="card step rv" name="etapa">
+        <summary><svg class="i"><use href="#flask"/></svg><h3>Manipulação</h3></summary>
+        <div class="step__body"><p>É aqui que a ideia vira produto: <span class="glossary-term" tabindex="0" data-term="Surfactantes" data-tooltip="Ingredientes que limpam e formam espuma, ao reduzir a tensão entre água e óleo. São a base de shampoos.">surfactantes</span>, <span class="glossary-term" tabindex="0" data-term="Ativos" data-tooltip="Ingredientes com função específica na fórmula, como hidratar, nutrir ou reparar os fios.">ativos</span> e <span class="glossary-term" tabindex="0" data-term="Emulsão" data-tooltip="Mistura estável de água e óleo, que normalmente se separariam. É obtida com a ajuda de emulsificantes.">emulsões</span> ganham forma, com processos padronizados e olhar atento a cada mistura.</p><ul><li>Processos padronizados</li><li>Acompanhamento em cada lote</li></ul></div>
+      </details>
+      <details class="card step rv" name="etapa">
+        <summary><svg class="i"><use href="#gauge"/></svg><h3>Controle de qualidade</h3></summary>
+        <div class="step__body"><p>Se não está perfeito, não sai.</p><ul><li><span class="glossary-term" tabindex="0" data-term="pH" data-tooltip="Medida de acidez ou alcalinidade, numa escala de 0 a 14. Em cosméticos, o pH adequado ajuda a proteger fio e couro cabeludo e a fórmula a funcionar como deveria.">pH</span> e <span class="glossary-term" tabindex="0" data-term="Viscosidade" data-tooltip="Grau de espessura do produto: o quanto ele escorre ou fica firme. Define a textura e a facilidade de aplicação.">viscosidade</span></li><li><span class="glossary-term" tabindex="0" data-term="Odor" data-tooltip="Análise do cheiro do produto, comparado ao padrão aprovado, para garantir consistência entre os lotes.">Odor</span> e <span class="glossary-term" tabindex="0" data-term="Densidade" data-tooltip="Relação entre o peso e o volume do produto. Ajuda a confirmar que cada lote está igual à fórmula aprovada.">densidade</span></li></ul></div>
+      </details>
+      <details class="card step rv" name="etapa">
+        <summary><svg class="i"><use href="#box"/></svg><h3>Envase, rotulagem e expedição</h3></summary>
+        <div class="step__body"><p>O momento em que o sonho ganha rótulo, nome e caminho até o consumidor.</p><ul><li>Envase e rotulagem com a sua marca</li><li>Conferência final e expedição</li></ul></div>
+      </details>
+    </div>
+    <p class="quote rv">Qualidade não é uma etapa. <span class="gt">Qualidade é uma cultura.</span></p>
+  </div>
+</section>
+
+<!-- ============ PORTFÓLIO ============ -->
+<section class="sec" id="portfolio" aria-labelledby="t-port">
+  <div class="wrap">
+    <p class="eyebrow">Portfólio de categorias</p>
+    <h2 class="h2 rv" id="t-port">Tudo o que a sua marca <span class="gt">precisa.</span></h2>
+    <ul class="bento">
+      <li class="card cell cell--hero"><small>01</small><h3><span class="glossary-term" tabindex="0" data-term="Colorações" data-tooltip="Produtos que mudam ou realçam a cor dos cabelos.">Colorações</span></h3><svg class="i i--bg" aria-hidden="true"><use href="#palette"/></svg></li>
+      <li class="card cell"><small>02</small><h3><span class="glossary-term" tabindex="0" data-term="Pós descolorantes" data-tooltip="Produtos usados para clarear os fios, removendo parte do pigmento.">Pós descolorantes</span></h3><svg class="i i--bg" aria-hidden="true"><use href="#flask"/></svg></li>
+      <li class="card cell"><small>03</small><h3><span class="glossary-term" tabindex="0" data-term="Matizadores" data-tooltip="Neutralizam tons indesejados, como o amarelado, em cabelos loiros, grisalhos ou descoloridos.">Matizadores</span></h3><svg class="i i--bg" aria-hidden="true"><use href="#spark"/></svg></li>
+      <li class="card cell"><small>04</small><h3><span class="glossary-term" tabindex="0" data-term="Shampoos" data-tooltip="Produtos de limpeza do cabelo e do couro cabeludo, formulados com surfactantes.">Shampoos</span></h3><svg class="i i--bg" aria-hidden="true"><use href="#drop"/></svg></li>
+      <li class="card cell"><small>05</small><h3><span class="glossary-term" tabindex="0" data-term="Máscaras" data-tooltip="Tratamentos de textura mais densa que hidratam, nutrem ou reconstroem os fios.">Máscaras</span></h3><svg class="i i--bg" aria-hidden="true"><use href="#layers"/></svg></li>
+      <li class="card cell"><small>06</small><h3><span class="glossary-term" tabindex="0" data-term="Condicionadores" data-tooltip="Usados após o shampoo para facilitar o desembaraço e dar maciez.">Condicionadores</span></h3><svg class="i i--bg" aria-hidden="true"><use href="#waves"/></svg></li>
+      <li class="card cell cell--wide"><small>07</small><h3><span class="glossary-term" tabindex="0" data-term="Ativadores de cachos" data-tooltip="Definem e realçam a forma dos cachos, controlando o frizz.">Ativadores de cachos</span></h3><svg class="i i--bg" aria-hidden="true"><use href="#curl"/></svg></li>
+      <li class="card cell"><small>08</small><h3><span class="glossary-term" tabindex="0" data-term="Tratamentos" data-tooltip="Linhas com ação específica, como hidratação, nutrição ou reconstrução.">Tratamentos</span></h3><svg class="i i--bg" aria-hidden="true"><use href="#shield"/></svg></li>
+      <li class="card cell"><small>09</small><h3><span class="glossary-term" tabindex="0" data-term="Finalizadores" data-tooltip="Aplicados no fim da rotina para modelar, proteger e dar acabamento ao penteado.">Finalizadores</span></h3><svg class="i i--bg" aria-hidden="true"><use href="#wind"/></svg></li>
+      <li class="card cell"><small>10</small><h3><span class="glossary-term" tabindex="0" data-term="Redução de volume" data-tooltip="Produtos que ajudam a diminuir o volume e controlar o frizz.">Redução de volume</span></h3><svg class="i i--bg" aria-hidden="true"><use href="#shrink"/></svg></li>
+      <li class="card cell cell--cta"><a href="#contato" style="display:contents"><small>11</small><span style="display:flex;align-items:flex-end;justify-content:space-between;gap:1rem"><h3>Projetos personalizados</h3><svg class="i" aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ INOVAÇÃO ============ -->
+<section class="sec" id="inovacao" aria-labelledby="t-inov">
+  <div class="wrap innov">
+    <div>
+      <p class="eyebrow">Inovação e visão de mundo</p>
+      <h2 class="h2 rv" id="t-inov">Do Brasil <br>para <span class="gt">o mundo.</span></h2>
+      <p class="lead">Buscamos tecnologias internacionais, investimos em <span class="glossary-term" tabindex="0" data-term="P&amp;D" data-tooltip="Pesquisa e Desenvolvimento: estudo e criação de novas fórmulas, ativos e tecnologias.">P&amp;D</span> e olhamos para fora para trazer o que há de melhor para a sua fórmula. E queremos levar a indústria brasileira além das fronteiras, com exportação e parcerias globais.</p>
+      <div class="pillars">
+        <article class="card pillar"><svg class="i" aria-hidden="true"><use href="#cpu"/></svg><h3 style="font-size:1rem;letter-spacing:0;font-weight:500"><span class="glossary-term" tabindex="0" data-term="P&amp;D" data-tooltip="Pesquisa e Desenvolvimento: estudo e criação de novas fórmulas, ativos e tecnologias.">P&amp;D</span> e tecnologias internacionais</h3></article>
+        <article class="card pillar"><svg class="i" aria-hidden="true"><use href="#globe"/></svg><h3 style="font-size:1rem;letter-spacing:0;font-weight:500">Exportação e atuação global</h3></article>
+        <article class="card pillar"><svg class="i" aria-hidden="true"><use href="#users"/></svg><h3 style="font-size:1rem;letter-spacing:0;font-weight:500">Parcerias com o mercado mundial</h3></article>
+      </div>
+    </div>
+    <aside class="card map rv" aria-label="Mapa conceitual de conexões globais">
+      <div class="map__top"><span>MAPA CONCEITUAL</span><span>BRASIL → MUNDO</span></div>
+      <svg viewBox="0 0 420 340" role="img" aria-labelledby="mapT"><title id="mapT">Conexões partindo do Brasil rumo a tecnologia, tendências, parcerias e P&amp;D</title>
+        <defs><pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#2c2c2c"/></pattern>
+        <linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#FF5500"/><stop offset="1" stop-color="#FF8800"/></linearGradient></defs>
+        <rect width="420" height="340" fill="url(#dots)"/>
+        <g fill="none" stroke="url(#lg)" stroke-width="1.5" stroke-dasharray="6 8"><path d="M120 230Q150 90 250 70"/><path d="M120 230Q250 150 350 140"/><path d="M120 230Q240 290 330 270"/><path d="M120 230Q70 150 70 90"/></g>
+        <g fill="#fff" font-size="11" font-family="system-ui,sans-serif"><circle cx="250" cy="70" r="4"/><text x="258" y="62">Tecnologia</text><circle cx="350" cy="140" r="4"/><text x="300" y="128">Tendências</text><circle cx="330" cy="270" r="4"/><text x="276" y="292">Parcerias</text><circle cx="70" cy="90" r="4"/><text x="78" y="86">P&amp;D</text></g>
+        <circle class="pulse" cx="120" cy="230" r="8" fill="#FF5500"/><circle cx="120" cy="230" r="8" fill="#FF5500"/>
+        <text x="104" y="256" fill="#fff" font-size="13" font-weight="700" font-family="system-ui,sans-serif">BRASIL</text>
+      </svg>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ CONFORMIDADE ============ -->
+<section class="sec" id="conformidade" aria-labelledby="t-conf">
+  <div class="wrap">
+    <p class="eyebrow">Estrutura, responsabilidade e regularidade</p>
+    <h2 class="h2 rv" id="t-conf">Autoridade que se prova com <span class="gt">licença.</span></h2>
+    <ul class="seals">
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg><span class="glossary-term" tabindex="0" data-term="ANVISA" data-tooltip="Agência Nacional de Vigilância Sanitária: regula e fiscaliza cosméticos e as indústrias do setor.">ANVISA</span></li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg><span class="glossary-term" tabindex="0" data-term="IBAMA" data-tooltip="Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis: fiscaliza a atuação ambiental.">IBAMA</span></li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg><span class="glossary-term" tabindex="0" data-term="Polícia Federal" data-tooltip="Participa do controle de produtos químicos de uso restrito, conforme a legislação.">Polícia Federal</span></li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg><span class="glossary-term" tabindex="0" data-term="Polícia Civil" data-tooltip="Participa da fiscalização de produtos químicos controlados no âmbito estadual, conforme a legislação.">Polícia Civil</span></li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg><span class="glossary-term" tabindex="0" data-term="Exército Brasileiro" data-tooltip="Responsável pelo controle de produtos de uso restrito regulados pelo Exército, conforme a legislação.">Exército Brasileiro</span></li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg><span class="glossary-term" tabindex="0" data-term="Vigilância Sanitária" data-tooltip="Órgão que fiscaliza as condições sanitárias da fábrica e emite licenças de funcionamento.">Vigilância Sanitária</span></li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg><span class="glossary-term" tabindex="0" data-term="Corpo de Bombeiros" data-tooltip="Atesta, por vistoria, a segurança contra incêndio das instalações.">Corpo de Bombeiros</span></li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg><span class="glossary-term" tabindex="0" data-term="CETESB" data-tooltip="Companhia ambiental do Estado de São Paulo, responsável pelo licenciamento e controle da poluição.">CETESB</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ GLOSSÁRIO TÉCNICO ============ -->
+<section class="sec" id="glossario" aria-labelledby="t-gloss">
+  <div class="wrap">
+    <p class="eyebrow">Glossário técnico</p>
+    <h2 class="h2 rv" id="t-gloss">O vocabulário da indústria, <span class="gt">sem mistério.</span></h2>
+    <p class="lead">Os termos sublinhados em todo o site explicam a si mesmos ao passar o mouse ou tocar. Aqui está a lista completa.</p>
+    <dl class="gloss"><div class="card gloss__item"><dt id="g-anvisa">ANVISA</dt><dd>Agência Nacional de Vigilância Sanitária: regula e fiscaliza cosméticos e as indústrias do setor.</dd></div><div class="card gloss__item"><dt id="g-ativadores">Ativadores de cachos</dt><dd>Definem e realçam a forma dos cachos, controlando o frizz.</dd></div><div class="card gloss__item"><dt id="g-ativos">Ativos</dt><dd>Ingredientes com função específica na fórmula, como hidratar, nutrir ou reparar os fios.</dd></div><div class="card gloss__item"><dt id="g-cetesb">CETESB</dt><dd>Companhia ambiental do Estado de São Paulo, responsável pelo licenciamento e controle da poluição.</dd></div><div class="card gloss__item"><dt id="g-coloracoes">Colorações</dt><dd>Produtos que mudam ou realçam a cor dos cabelos.</dd></div><div class="card gloss__item"><dt id="g-condicionadores">Condicionadores</dt><dd>Usados após o shampoo para facilitar o desembaraço e dar maciez.</dd></div><div class="card gloss__item"><dt id="g-bombeiros">Corpo de Bombeiros</dt><dd>Atesta, por vistoria, a segurança contra incêndio das instalações.</dd></div><div class="card gloss__item"><dt id="g-densidade">Densidade</dt><dd>Relação entre o peso e o volume do produto. Ajuda a confirmar que cada lote está igual à fórmula aprovada.</dd></div><div class="card gloss__item"><dt id="g-emulsao">Emulsão</dt><dd>Mistura estável de água e óleo, que normalmente se separariam. É obtida com a ajuda de emulsificantes.</dd></div><div class="card gloss__item"><dt id="g-exercito">Exército Brasileiro</dt><dd>Responsável pelo controle de produtos de uso restrito regulados pelo Exército, conforme a legislação.</dd></div><div class="card gloss__item"><dt id="g-finalizadores">Finalizadores</dt><dd>Aplicados no fim da rotina para modelar, proteger e dar acabamento ao penteado.</dd></div><div class="card gloss__item"><dt id="g-formula">Fórmula</dt><dd>A receita do produto: ingredientes, proporções e modo de preparo.</dd></div><div class="card gloss__item"><dt id="g-ibama">IBAMA</dt><dd>Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis: fiscaliza a atuação ambiental.</dd></div><div class="card gloss__item"><dt id="g-lote">Lote</dt><dd>Quantidade de produto fabricada de uma só vez, com identificação própria para rastreio.</dd></div><div class="card gloss__item"><dt id="g-mascaras">Máscaras</dt><dd>Tratamentos de textura mais densa que hidratam, nutrem ou reconstroem os fios.</dd></div><div class="card gloss__item"><dt id="g-materia">Matéria-prima</dt><dd>Insumos usados na fabricação, como ativos, surfactantes, óleos e fragrâncias.</dd></div><div class="card gloss__item"><dt id="g-matizadores">Matizadores</dt><dd>Neutralizam tons indesejados, como o amarelado, em cabelos loiros, grisalhos ou descoloridos.</dd></div><div class="card gloss__item"><dt id="g-odor">Odor</dt><dd>Análise do cheiro do produto, comparado ao padrão aprovado, para garantir consistência entre os lotes.</dd></div><div class="card gloss__item"><dt id="g-pd">P&amp;D</dt><dd>Pesquisa e Desenvolvimento: estudo e criação de novas fórmulas, ativos e tecnologias.</dd></div><div class="card gloss__item"><dt id="g-ph">pH</dt><dd>Medida de acidez ou alcalinidade, numa escala de 0 a 14. Em cosméticos, o pH adequado ajuda a proteger fio e couro cabeludo e a fórmula a funcionar como deveria.</dd></div><div class="card gloss__item"><dt id="g-pc">Polícia Civil</dt><dd>Participa da fiscalização de produtos químicos controlados no âmbito estadual, conforme a legislação.</dd></div><div class="card gloss__item"><dt id="g-pf">Polícia Federal</dt><dd>Participa do controle de produtos químicos de uso restrito, conforme a legislação.</dd></div><div class="card gloss__item"><dt id="g-pos">Pós descolorantes</dt><dd>Produtos usados para clarear os fios, removendo parte do pigmento.</dd></div><div class="card gloss__item"><dt id="g-pl">Private label</dt><dd>Modelo em que a indústria fabrica o produto e a marca que o vende pertence ao cliente.</dd></div><div class="card gloss__item"><dt id="g-reducao">Redução de volume</dt><dd>Produtos que ajudam a diminuir o volume e controlar o frizz.</dd></div><div class="card gloss__item"><dt id="g-shampoos">Shampoos</dt><dd>Produtos de limpeza do cabelo e do couro cabeludo, formulados com surfactantes.</dd></div><div class="card gloss__item"><dt id="g-surfactantes">Surfactantes</dt><dd>Ingredientes que limpam e formam espuma, ao reduzir a tensão entre água e óleo. São a base de shampoos.</dd></div><div class="card gloss__item"><dt id="g-tratamentos">Tratamentos</dt><dd>Linhas com ação específica, como hidratação, nutrição ou reconstrução.</dd></div><div class="card gloss__item"><dt id="g-visa">Vigilância Sanitária</dt><dd>Órgão que fiscaliza as condições sanitárias da fábrica e emite licenças de funcionamento.</dd></div><div class="card gloss__item"><dt id="g-viscosidade">Viscosidade</dt><dd>Grau de espessura do produto: o quanto ele escorre ou fica firme. Define a textura e a facilidade de aplicação.</dd></div></dl>
+  </div>
+</section>
+
+<!-- ============ PARCERIA B2B ============ -->
+<section class="closing" id="contato" aria-labelledby="t-close">
+  <div class="wrap">
+    <h2 id="t-close">Não queremos ser só <br>um <span class="ol">fornecedor.</span></h2>
+    <p>Buscamos parcerias de longo prazo, cuidando de cada detalhe antes do seu produto chegar às mãos do consumidor.</p>
+    <a class="btn btn--p" href="mailto:contato@maximusindustria.com.br" style="padding:1.2rem 2.5rem;font-size:1.1rem">Iniciar meu projeto <svg class="i"><use href="#arrow"/></svg></a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="wrap ftr__grid">
+    <div><a class="logo" href="#inicio" aria-label="Maximus Indústria"><b class="gt" aria-hidden="true">X</b>MAXIMUS</a><p style="margin-top:.75rem;font-size:.9rem;color:var(--muted)">MAXIMUS INDÚSTRIA — fabricação de cosméticos</p></div>
+    <nav aria-label="Links rápidos"><p class="ftr__t">Links rápidos</p><ul><li><a href="#portfolio">Portfólio</a></li><li><a href="#processos">Processos</a></li><li><a href="#inovacao">Inovação</a></li><li><a href="#conformidade">Conformidade</a></li><li><a href="#glossario">Glossário</a></li></ul></nav>
+    <div><p class="ftr__t">Contato</p><address>
+      <span><svg class="i" aria-hidden="true"><use href="#mail"/></svg><a href="mailto:contato@maximusindustria.com.br">contato@maximusindustria.com.br</a></span>
+      <span><svg class="i" aria-hidden="true"><use href="#phone"/></svg>(00) 0000-0000</span>
+      <span><svg class="i" aria-hidden="true"><use href="#pin"/></svg>Cidade / UF</span>
+    </address></div>
+  </div>
+  <div class="ftr__mark" aria-hidden="true">MAXIMUS</div>
+  <p class="ftr__copy">© 2026 Maximus Indústria. Todos os direitos reservados.</p>
+</footer>
+
+<!-- ============ JS ============ -->
+<script src="main.js" defer></script>
+</body>
+</html>

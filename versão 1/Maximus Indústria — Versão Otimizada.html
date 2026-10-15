@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maximus Indústria | Fabricação e terceirização de cosméticos</title>
+<meta name="description" content="Você cria a sua marca. A Maximus cuida da fabricação. Indústria de cosméticos com terceirização completa, controle de qualidade rigoroso e regularidade total.">
+<meta name="theme-color" content="#050505">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Maximus Indústria | Muito além de fabricar cosméticos.">
+<meta property="og:description" content="Você cria a sua marca. A Maximus cuida da fabricação.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Maximus Indústria","description":"Indústria de fabricação e terceirização de cosméticos."}</script>
+
+<style>
+/* ============ 1. TOKENS ============ */
+:root{
+  --bg:#050505; --surface:#0e0e0e; --line:rgba(255,255,255,.1);
+  --text:#b8b8b8; --muted:#8c8c8c; --white:#fff;
+  --o1:#FF5500; --o2:#FF8800; --grad:linear-gradient(120deg,var(--o1),var(--o2));
+  --max:72rem; --pad:1.25rem; --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:dark; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+
+/* ============ 2. BASE ============ */
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 5rem);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+h1,h2,h3,p,ul{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{color:var(--white);font-weight:800;letter-spacing:-.035em;line-height:1.05}
+:focus-visible{outline:2px solid var(--o2);outline-offset:3px;border-radius:4px}
+.i{width:1.5rem;height:1.5rem;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.gt{color:var(--o1);background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.ol{-webkit-text-stroke:1.5px rgba(255,255,255,.7);-webkit-text-fill-color:transparent}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:1rem;top:-4rem;z-index:100;background:var(--o1);color:#050505;padding:.6rem 1rem;border-radius:.5rem;font-weight:700}
+.skip:focus{top:1rem}
+
+/* ============ 3. LAYOUT & TIPOGRAFIA ============ */
+.wrap{width:min(100% - 2*var(--pad),var(--max));margin-inline:auto}
+.sec{padding-block:5rem}
+.eyebrow{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--o1);font-weight:600;margin-bottom:1rem}
+.h2{font-size:clamp(2rem,6vw,4rem)}
+.lead{font-size:1.125rem;max-width:36rem;margin-top:1.5rem}
+
+/* ============ 4. COMPONENTES ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 1.7rem;border-radius:999px;font-weight:700;border:1px solid transparent;transition:transform .25s var(--ease),box-shadow .25s,background-color .25s,border-color .25s}
+.btn--p{background:var(--grad);color:#050505}
+.btn--p:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,85,0,.45)}
+.btn--g{border-color:rgba(255,255,255,.25);color:var(--white)}
+.btn--g:hover{border-color:var(--o1);background:rgba(255,85,0,.1);transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn .i{width:1.1rem;height:1.1rem;transition:transform .25s var(--ease)}
+.btn:hover .i{transform:translate(2px,-2px)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:1.5rem;transition:transform .35s var(--ease),border-color .35s,box-shadow .35s}
+.card:hover{transform:translateY(-4px);border-color:rgba(255,85,0,.6);box-shadow:0 18px 40px -18px rgba(255,85,0,.35)}
+
+/* ============ 5. HEADER ============ */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top,0px);background:rgba(5,5,5,.92);border-bottom:1px solid var(--line)}
+.hdr__bar{display:flex;align-items:center;justify-content:space-between;padding-block:.9rem}
+.logo{display:flex;align-items:center;gap:.5rem;color:var(--white);font-weight:800;letter-spacing:.25em}
+.logo b{font-size:1.9rem;line-height:1;letter-spacing:0}
+.menu-btn{background:none;border:0;color:var(--white);padding:.25rem;cursor:pointer}
+.nav{display:none;padding-bottom:1.25rem}
+.nav.open{display:block}
+.nav ul{display:grid;gap:1rem;font-size:1.1rem;color:var(--white)}
+.hdr__cta{display:none}
+@media(min-width:1024px){
+  .menu-btn{display:none}
+  .nav{display:block;padding:0}
+  .nav ul{display:flex;gap:2rem;font-size:.9rem}
+  .nav a{padding-block:.4rem;border-bottom:2px solid transparent;transition:border-color .25s,color .25s}
+  .nav a:hover{border-color:var(--o1)}
+  .hdr__cta{display:inline-flex;padding:.65rem 1.3rem;font-size:.9rem}
+  .hdr__bar{flex-wrap:nowrap}
+}
+
+/* ============ 6. HERO ============ */
+.hero{min-height:100vh;min-height:100svh;display:grid;align-items:center;padding-block:7rem 4rem;background:
+  radial-gradient(circle at 85% 8%,rgba(255,85,0,.28),transparent 50%),
+  radial-gradient(circle at 0% 100%,rgba(255,136,0,.1),transparent 40%),
+  linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/64px 64px,
+  linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/64px 64px}
+.hero h1{font-size:clamp(2.5rem,10vw,7.5rem);line-height:.98;margin-bottom:2rem}
+.hero h1 span{display:block}
+.hero__sub{font-size:clamp(1.1rem,3vw,1.5rem);color:#d6d6d6;max-width:30rem}
+.hero__sub strong{color:var(--white)}
+.hero__cta{display:flex;flex-direction:column;gap:1rem;margin-top:2.25rem}
+@media(min-width:640px){.hero__cta{flex-direction:row}}
+
+/* ============ 7. MANIFESTO ============ */
+.manifesto p{font-size:clamp(1.75rem,5.2vw,4.25rem);font-weight:700;color:var(--white);letter-spacing:-.035em;line-height:1.12;margin-top:.9rem}
+
+/* ============ 8. PROCESSOS ============ */
+.steps{display:grid;gap:.75rem;margin-top:3rem}
+.step{padding:1.5rem}
+.step summary{display:flex;align-items:center;gap:1rem;cursor:pointer;list-style:none}
+.step summary::-webkit-details-marker{display:none}
+.step summary .i{color:var(--o2);width:2rem;height:2rem}
+.step h3{font-size:1.25rem;flex:1;letter-spacing:-.02em}
+.step summary::after{content:"+";font-size:1.5rem;color:var(--o1);transition:transform .3s var(--ease)}
+.step[open] summary::after{transform:rotate(45deg)}
+.step[open]{border-color:rgba(255,85,0,.6)}
+.step__body{margin-top:1rem;font-size:.95rem}
+.step__body li{margin-top:.35rem;color:#d4d4d4}
+.step__body li::before{content:"→ ";color:var(--o1)}
+.quote{margin-top:2.5rem;font-size:clamp(1.4rem,3.5vw,2.25rem);font-weight:700;color:var(--white);letter-spacing:-.03em;border-left:3px solid var(--o1);padding-left:1.25rem}
+@media(min-width:1024px){.steps{grid-template-columns:repeat(4,1fr);align-items:start}}
+
+/* ============ 9. PORTFÓLIO (BENTO) ============ */
+.bento{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:9.5rem;grid-auto-flow:dense;gap:.75rem;margin-top:3rem}
+.cell{position:relative;overflow:hidden;padding:1.1rem;font-size:1rem}
+.cell h3{position:relative;font-size:1.05rem;margin-top:.4rem}
+.cell small{font-size:.75rem;color:var(--o1);font-weight:700}
+.cell .i--bg{position:absolute;right:-.75rem;bottom:-.75rem;width:55%;height:auto;stroke-width:1.2;color:var(--o1);opacity:.18;transition:transform .7s var(--ease),opacity .4s}
+.cell:hover .i--bg{transform:scale(1.3) rotate(-6deg);opacity:.4}
+.cell--hero{grid-column:span 2;grid-row:span 2;padding:1.5rem}
+.cell--hero h3{font-size:clamp(1.9rem,6vw,3.2rem)}
+.cell--wide{grid-column:span 2}
+.cell--cta{grid-column:span 2;background:var(--grad);border:0;color:#050505;display:flex;flex-direction:column;justify-content:space-between}
+.cell--cta h3,.cell--cta small{color:#050505}
+.cell--cta .i{width:2rem;height:2rem}
+@media(min-width:1024px){.bento{grid-template-columns:repeat(4,1fr);grid-auto-rows:11.5rem}.cell{padding:1.4rem}}
+
+/* ============ 10. INOVAÇÃO ============ */
+.innov{display:grid;gap:3rem;align-items:center}
+.pillars{display:grid;gap:.75rem;margin-top:2rem}
+.pillar{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;color:var(--white);border-radius:1rem}
+.pillar .i{color:var(--o2)}
+.map{padding:1rem}
+.map__top{display:flex;justify-content:space-between;font-size:.7rem;letter-spacing:.25em;color:var(--muted);margin-bottom:.5rem}
+.map svg{display:block;width:100%;height:auto}
+.pulse{transform-box:fill-box;transform-origin:center}
+@media(min-width:1024px){.innov{grid-template-columns:1fr 1fr}.map{padding:1.5rem}}
+
+/* ============ 11. COMPLIANCE ============ */
+.seals{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-top:3rem}
+.seal{display:flex;align-items:center;gap:.75rem;padding:1.1rem 1.25rem;color:var(--white);font-weight:600;border-radius:1rem}
+.seal .i{color:var(--o2)}
+@media(min-width:768px){.seals{grid-template-columns:repeat(4,1fr)}}
+
+/* ============ 12. FECHAMENTO ============ */
+.closing{text-align:center;padding-block:7rem;background:radial-gradient(circle at 50% 50%,rgba(255,85,0,.22),transparent 55%)}
+.closing h2{font-size:clamp(2.3rem,8vw,6rem);line-height:1}
+.closing p{max-width:40rem;margin:1.75rem auto 2.25rem;font-size:1.15rem}
+
+/* ============ 13. FOOTER ============ */
+.ftr{border-top:1px solid var(--line);padding-top:4rem;overflow:hidden}
+.ftr__grid{display:grid;gap:2.5rem}
+.ftr__t{color:var(--white);font-weight:700;margin-bottom:.75rem}
+.ftr ul{display:grid;gap:.5rem;font-size:.95rem}
+.ftr a:hover{color:var(--white)}
+.ftr address{font-style:normal;display:grid;gap:.6rem;font-size:.95rem}
+.ftr address span{display:flex;align-items:center;gap:.6rem}
+.ftr address .i{width:1.1rem;height:1.1rem;color:var(--o2)}
+.ftr__mark{margin-top:3rem;text-align:center;font-weight:800;line-height:.8;font-size:clamp(3.5rem,19vw,16rem);letter-spacing:-.04em;-webkit-text-stroke:1px rgba(255,255,255,.12);-webkit-text-fill-color:transparent;user-select:none}
+.ftr__copy{text-align:center;font-size:.75rem;color:var(--muted);padding-block:1rem 1.5rem}
+@media(min-width:768px){.ftr__grid{grid-template-columns:2fr 1fr 1.5fr}.sec{padding-block:8rem}}
+
+/* ============ 14. ANIMAÇÕES (só transform/opacity, GPU) ============ */
+@keyframes up{from{opacity:0;transform:translateY(1.5rem)}}
+@keyframes pulse{from{opacity:.8;transform:scale(1)}to{opacity:0;transform:scale(3.4)}}
+@keyframes rv{from{opacity:0;transform:translateY(2rem)}}
+@keyframes mf{from{opacity:.15}}
+@media(prefers-reduced-motion:no-preference){
+  .hero .wrap>*{animation:up .9s var(--ease) both}
+  .hero .wrap>:nth-child(2){animation-delay:.1s}.hero .wrap>:nth-child(3){animation-delay:.2s}.hero .wrap>:nth-child(4){animation-delay:.3s}
+  .pulse{animation:pulse 2.4s ease-out infinite}
+  @supports (animation-timeline:view()){
+    .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+    .manifesto p.mf{animation:mf linear both;animation-timeline:view();animation-range:entry 25% cover 40%}
+  }
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- ============ SPRITE DE ÍCONES (SVG embutido, reutilizado via <use>) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="scale" viewBox="0 0 24 24"><path d="M12 3v18M6 21h12M5 7h14M7 7l-3 7a3 3 0 0 0 6 0L7 7zM17 7l-3 7a3 3 0 0 0 6 0l-3-7z"/></symbol>
+  <symbol id="flask" viewBox="0 0 24 24"><path d="M10 2v7.5L4.5 19a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L14 9.5V2M8.5 2h7M7 16h10"/></symbol>
+  <symbol id="gauge" viewBox="0 0 24 24"><path d="m12 14 4-4M3.3 19a10 10 0 1 1 17.4 0"/></symbol>
+  <symbol id="box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5V8zM3.3 7.5 12 12.5l8.7-5M12 22V12.5"/></symbol>
+  <symbol id="palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.3 0-1.1.9-2 2-2h2.3A3.7 3.7 0 0 0 21 10.7C21 6.3 17 3 12 3zM7.5 11h.01M10 7.5h.01M14.5 7.5h.01"/></symbol>
+  <symbol id="spark" viewBox="0 0 24 24"><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3zM19 16l.7 1.8 1.8.7-1.8.7L19 21l-.7-1.8-1.8-.7 1.8-.7L19 16z"/></symbol>
+  <symbol id="drop" viewBox="0 0 24 24"><path d="M12 3s6 6.2 6 10.5a6 6 0 0 1-12 0C6 9.2 12 3 12 3z"/></symbol>
+  <symbol id="waves" viewBox="0 0 24 24"><path d="M3 8c3 0 3 2 6 2s3-2 6-2 3 2 6 2M3 14c3 0 3 2 6 2s3-2 6-2 3 2 6 2"/></symbol>
+  <symbol id="layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5zM3 13l9 5 9-5"/></symbol>
+  <symbol id="curl" viewBox="0 0 24 24"><path d="M12 12a2 2 0 1 1 2 2 4 4 0 1 1-4-4 6 6 0 1 1 6 6"/></symbol>
+  <symbol id="shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6l8-3zM8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="wind" viewBox="0 0 24 24"><path d="M3 8h10a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h7"/></symbol>
+  <symbol id="shrink" viewBox="0 0 24 24"><path d="M4 14h6v6M20 10h-6V4M14 10l7-7M3 21l7-7"/></symbol>
+  <symbol id="cpu" viewBox="0 0 24 24"><path d="M7 5h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM9 9h6v6H9zM9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></symbol>
+  <symbol id="globe" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+  <symbol id="users" viewBox="0 0 24 24"><path d="M16 20v-1.5a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4V20M9.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM21 20v-1.5a4 4 0 0 0-3-3.9M15.5 4.2a3.5 3.5 0 0 1 0 6.6"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><path d="M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM3 7l9 6 9-6"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11zM12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></symbol>
+</svg>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <div class="wrap hdr__bar" style="flex-wrap:wrap">
+    <a class="logo" href="#inicio" aria-label="Maximus Indústria, ir ao início"><b class="gt" aria-hidden="true">X</b>MAXIMUS</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu"><svg class="i" style="width:1.75rem;height:1.75rem"><use href="#menu"/></svg></button>
+    <nav class="nav" id="nav" aria-label="Principal" style="flex-basis:100%;order:3">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#processos">Processos</a></li>
+        <li><a href="#inovacao">Inovação</a></li>
+        <li><a href="#conformidade">Conformidade</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--p hdr__cta" href="#contato">Fale com a Indústria <svg class="i"><use href="#arrow"/></svg></a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio" aria-labelledby="t-hero">
+  <div class="wrap">
+    <p class="eyebrow">Indústria de cosméticos · Private label</p>
+    <h1 id="t-hero"><span>Muito além de</span><span class="ol">fabricar</span><span class="gt">cosméticos.</span></h1>
+    <p class="hero__sub">Você cria a sua marca. <strong>A Maximus cuida da fabricação.</strong></p>
+    <div class="hero__cta">
+      <a class="btn btn--p" href="#contato">Iniciar meu projeto <svg class="i"><use href="#arrow"/></svg></a>
+      <a class="btn btn--g" href="#portfolio">Conhecer portfólio</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="sec manifesto" aria-labelledby="t-manifesto">
+  <div class="wrap">
+    <h2 class="eyebrow" id="t-manifesto">Manifesto</h2>
+    <p class="mf">Toda marca começa com <span class="gt">uma ideia.</span></p>
+    <p class="mf">Um sonho que alguém teve, <span class="gt">sozinho.</span></p>
+    <p class="mf">A Maximus pega esse sonho <span class="gt">nas mãos.</span></p>
+    <p class="mf">E transforma em fórmula, em lote, <span class="gt">em produto.</span></p>
+    <p class="mf">Até chegar a quem <span class="gt">vai usar.</span></p>
+  </div>
+</section>
+
+<!-- ============ PROCESSOS ============ -->
+<section class="sec" id="processos" aria-labelledby="t-proc">
+  <div class="wrap">
+    <p class="eyebrow">Do laboratório ao frasco</p>
+    <h2 class="h2 rv" id="t-proc">Rigor técnico, feito com paixão.</h2>
+    <div class="steps">
+      <details class="card step rv" name="etapa" open>
+        <summary><svg class="i"><use href="#scale"/></svg><h3>Pesagem</h3></summary>
+        <div class="step__body"><p>Cada matéria-prima medida com precisão. A fórmula só é fiel se a base for exata.</p><ul><li>Dosagem conforme a fórmula</li><li>Registro e rastreio por lote</li></ul></div>
+      </details>
+      <details class="card step rv" name="etapa">
+        <summary><svg class="i"><use href="#flask"/></svg><h3>Manipulação</h3></summary>
+        <div class="step__body"><p>É aqui que a ideia vira produto, com processos padronizados e olhar atento a cada mistura.</p><ul><li>Processos padronizados</li><li>Acompanhamento em cada lote</li></ul></div>
+      </details>
+      <details class="card step rv" name="etapa">
+        <summary><svg class="i"><use href="#gauge"/></svg><h3>Controle de qualidade</h3></summary>
+        <div class="step__body"><p>Se não está perfeito, não sai.</p><ul><li>pH e viscosidade</li><li>Odor e densidade</li></ul></div>
+      </details>
+      <details class="card step rv" name="etapa">
+        <summary><svg class="i"><use href="#box"/></svg><h3>Envase, rotulagem e expedição</h3></summary>
+        <div class="step__body"><p>O momento em que o sonho ganha rótulo, nome e caminho até o consumidor.</p><ul><li>Envase e rotulagem com a sua marca</li><li>Conferência final e expedição</li></ul></div>
+      </details>
+    </div>
+    <p class="quote rv">Qualidade não é uma etapa. <span class="gt">Qualidade é uma cultura.</span></p>
+  </div>
+</section>
+
+<!-- ============ PORTFÓLIO ============ -->
+<section class="sec" id="portfolio" aria-labelledby="t-port">
+  <div class="wrap">
+    <p class="eyebrow">Portfólio de categorias</p>
+    <h2 class="h2 rv" id="t-port">Tudo o que a sua marca <span class="gt">precisa.</span></h2>
+    <ul class="bento">
+      <li class="card cell cell--hero"><small>01</small><h3>Colorações</h3><svg class="i i--bg" aria-hidden="true"><use href="#palette"/></svg></li>
+      <li class="card cell"><small>02</small><h3>Pós descolorantes</h3><svg class="i i--bg" aria-hidden="true"><use href="#flask"/></svg></li>
+      <li class="card cell"><small>03</small><h3>Matizadores</h3><svg class="i i--bg" aria-hidden="true"><use href="#spark"/></svg></li>
+      <li class="card cell"><small>04</small><h3>Shampoos</h3><svg class="i i--bg" aria-hidden="true"><use href="#drop"/></svg></li>
+      <li class="card cell"><small>05</small><h3>Máscaras</h3><svg class="i i--bg" aria-hidden="true"><use href="#layers"/></svg></li>
+      <li class="card cell"><small>06</small><h3>Condicionadores</h3><svg class="i i--bg" aria-hidden="true"><use href="#waves"/></svg></li>
+      <li class="card cell cell--wide"><small>07</small><h3>Ativadores de cachos</h3><svg class="i i--bg" aria-hidden="true"><use href="#curl"/></svg></li>
+      <li class="card cell"><small>08</small><h3>Tratamentos</h3><svg class="i i--bg" aria-hidden="true"><use href="#shield"/></svg></li>
+      <li class="card cell"><small>09</small><h3>Finalizadores</h3><svg class="i i--bg" aria-hidden="true"><use href="#wind"/></svg></li>
+      <li class="card cell"><small>10</small><h3>Redução de volume</h3><svg class="i i--bg" aria-hidden="true"><use href="#shrink"/></svg></li>
+      <li class="card cell cell--cta"><a href="#contato" style="display:contents"><small>11</small><span style="display:flex;align-items:flex-end;justify-content:space-between;gap:1rem"><h3>Projetos personalizados</h3><svg class="i" aria-hidden="true"><use href="#arrow"/></svg></span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ INOVAÇÃO ============ -->
+<section class="sec" id="inovacao" aria-labelledby="t-inov">
+  <div class="wrap innov">
+    <div>
+      <p class="eyebrow">Inovação e visão de mundo</p>
+      <h2 class="h2 rv" id="t-inov">Do Brasil <br>para <span class="gt">o mundo.</span></h2>
+      <p class="lead">Buscamos tecnologias internacionais, investimos em P&amp;D e olhamos para fora para trazer o que há de melhor para a sua fórmula. E queremos levar a indústria brasileira além das fronteiras, com exportação e parcerias globais.</p>
+      <div class="pillars">
+        <article class="card pillar"><svg class="i" aria-hidden="true"><use href="#cpu"/></svg><h3 style="font-size:1rem;letter-spacing:0;font-weight:500">P&amp;D e tecnologias internacionais</h3></article>
+        <article class="card pillar"><svg class="i" aria-hidden="true"><use href="#globe"/></svg><h3 style="font-size:1rem;letter-spacing:0;font-weight:500">Exportação e atuação global</h3></article>
+        <article class="card pillar"><svg class="i" aria-hidden="true"><use href="#users"/></svg><h3 style="font-size:1rem;letter-spacing:0;font-weight:500">Parcerias com o mercado mundial</h3></article>
+      </div>
+    </div>
+    <aside class="card map rv" aria-label="Mapa conceitual de conexões globais">
+      <div class="map__top"><span>MAPA CONCEITUAL</span><span>BRASIL → MUNDO</span></div>
+      <svg viewBox="0 0 420 340" role="img" aria-labelledby="mapT"><title id="mapT">Conexões partindo do Brasil rumo a tecnologia, tendências, parcerias e P&amp;D</title>
+        <defs><pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#2c2c2c"/></pattern>
+        <linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#FF5500"/><stop offset="1" stop-color="#FF8800"/></linearGradient></defs>
+        <rect width="420" height="340" fill="url(#dots)"/>
+        <g fill="none" stroke="url(#lg)" stroke-width="1.5" stroke-dasharray="6 8"><path d="M120 230Q150 90 250 70"/><path d="M120 230Q250 150 350 140"/><path d="M120 230Q240 290 330 270"/><path d="M120 230Q70 150 70 90"/></g>
+        <g fill="#fff" font-size="11" font-family="system-ui,sans-serif"><circle cx="250" cy="70" r="4"/><text x="258" y="62">Tecnologia</text><circle cx="350" cy="140" r="4"/><text x="300" y="128">Tendências</text><circle cx="330" cy="270" r="4"/><text x="276" y="292">Parcerias</text><circle cx="70" cy="90" r="4"/><text x="78" y="86">P&amp;D</text></g>
+        <circle class="pulse" cx="120" cy="230" r="8" fill="#FF5500"/><circle cx="120" cy="230" r="8" fill="#FF5500"/>
+        <text x="104" y="256" fill="#fff" font-size="13" font-weight="700" font-family="system-ui,sans-serif">BRASIL</text>
+      </svg>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ CONFORMIDADE ============ -->
+<section class="sec" id="conformidade" aria-labelledby="t-conf">
+  <div class="wrap">
+    <p class="eyebrow">Estrutura, responsabilidade e regularidade</p>
+    <h2 class="h2 rv" id="t-conf">Autoridade que se prova com <span class="gt">licença.</span></h2>
+    <ul class="seals">
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg>ANVISA</li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg>IBAMA</li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg>Polícia Federal</li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg>Polícia Civil</li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg>Exército Brasileiro</li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg>Vigilância Sanitária</li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg>Corpo de Bombeiros</li>
+      <li class="card seal"><svg class="i" aria-hidden="true"><use href="#shield"/></svg>CETESB</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PARCERIA B2B ============ -->
+<section class="closing" id="contato" aria-labelledby="t-close">
+  <div class="wrap">
+    <h2 id="t-close">Não queremos ser só <br>um <span class="ol">fornecedor.</span></h2>
+    <p>Buscamos parcerias de longo prazo, cuidando de cada detalhe antes do seu produto chegar às mãos do consumidor.</p>
+    <a class="btn btn--p" href="mailto:contato@maximusindustria.com.br" style="padding:1.2rem 2.5rem;font-size:1.1rem">Iniciar meu projeto <svg class="i"><use href="#arrow"/></svg></a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="wrap ftr__grid">
+    <div><a class="logo" href="#inicio" aria-label="Maximus Indústria"><b class="gt" aria-hidden="true">X</b>MAXIMUS</a><p style="margin-top:.75rem;font-size:.9rem;color:var(--muted)">MAXIMUS INDÚSTRIA — fabricação de cosméticos</p></div>
+    <nav aria-label="Links rápidos"><p class="ftr__t">Links rápidos</p><ul><li><a href="#portfolio">Portfólio</a></li><li><a href="#processos">Processos</a></li><li><a href="#inovacao">Inovação</a></li><li><a href="#conformidade">Conformidade</a></li></ul></nav>
+    <div><p class="ftr__t">Contato</p><address>
+      <span><svg class="i" aria-hidden="true"><use href="#mail"/></svg><a href="mailto:contato@maximusindustria.com.br">contato@maximusindustria.com.br</a></span>
+      <span><svg class="i" aria-hidden="true"><use href="#phone"/></svg>(00) 0000-0000</span>
+      <span><svg class="i" aria-hidden="true"><use href="#pin"/></svg>Cidade / UF</span>
+    </address></div>
+  </div>
+  <div class="ftr__mark" aria-hidden="true">MAXIMUS</div>
+  <p class="ftr__copy">© 2026 Maximus Indústria. Todos os direitos reservados.</p>
+</footer>
+
+<!-- ============ JS MÍNIMO: apenas menu mobile ============ -->
+<script>
+(function(){
+  var b=document.getElementById('menuBtn'),n=document.getElementById('nav');
+  function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fechar menu':'Abrir menu')}
+  b.addEventListener('click',function(){set(!n.classList.contains('open'))});
+  n.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+})();
+</script>
+</body>
+</html>
