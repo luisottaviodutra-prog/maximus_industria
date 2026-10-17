@@ -512,7 +512,12 @@
       'MAXIMUS INDÚSTRIA — تصنيع مستحضرات التجميل.'
     ],
     f_social: ['Redes sociais', 'Social media', 'Redes sociales', 'Réseaux sociaux', 'وسائل التواصل الاجتماعي'],
-    phone: ['+55 (19) 99758-1227', '+55 (19) 99758-1227', '+55 (19) 99758-1227', '+55 (19) 99758-1227', '+55 (19) 99758-1227'],
+    contact_methods_aria: ['Canais de contato', 'Contact methods', 'Canales de contacto', 'Moyens de contact', 'وسائل الاتصال'],
+    contact_email_label: ['E-mail', 'Email', 'Correo electrónico', 'E-mail', 'البريد الإلكتروني'],
+    contact_whatsapp_label: ['WhatsApp', 'WhatsApp', 'WhatsApp', 'WhatsApp', 'واتساب'],
+    contact_phone_alt_label: ['Outro telefone / WhatsApp', 'Additional phone / WhatsApp', 'Otro teléfono / WhatsApp', 'Autre téléphone / WhatsApp', 'هاتف آخر / واتساب'],
+    phone: ['+55 (19) 99715-0437', '+55 (19) 99715-0437', '+55 (19) 99715-0437', '+55 (19) 99715-0437', '+55 (19) 99715-0437'],
+    phone_alt: ['+55 (19) 99758-1227', '+55 (19) 99758-1227', '+55 (19) 99758-1227', '+55 (19) 99758-1227', '+55 (19) 99758-1227'],
     location: ['São Paulo | SP', 'São Paulo | SP', 'São Paulo | SP', 'São Paulo | SP', 'São Paulo | SP'],
     copyright: [
       '© 2026 Maximus Indústria. Todos os direitos reservados.',
